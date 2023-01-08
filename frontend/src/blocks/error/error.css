@@ -1,0 +1,21 @@
+.error { 
+  color: #ff0000;
+  font-weight: 400;
+  width: 358px;
+  min-height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  font-family: 'Inter', Arial, sans-serif;
+  border: none;
+  box-sizing: border-box;
+  text-align: left;
+  opacity: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .error {
+    width: 238px;
+    margin: 0;
+  }
+}

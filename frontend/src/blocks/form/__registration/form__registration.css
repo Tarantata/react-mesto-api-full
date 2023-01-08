@@ -1,0 +1,19 @@
+.form__registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  height: 330px;
+  padding: 0;
+  margin: 36px 0 0 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 740px) {
+  .form__registration {
+    max-width: 280px;
+    height: 306px;
+    margin: 0;
+  }
+}

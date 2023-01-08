@@ -1,0 +1,12 @@
+.align {
+  margin: 0 64px 46px 2px;
+  padding: 0 0 26 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 560px) {
+  .align {
+    width: 238px;
+    margin: 0 0 76px 0;
+  }
+}

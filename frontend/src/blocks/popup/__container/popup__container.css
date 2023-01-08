@@ -1,0 +1,11 @@
+.popup__container {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: auto auto;
+}

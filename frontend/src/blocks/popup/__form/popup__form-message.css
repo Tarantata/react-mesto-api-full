@@ -1,0 +1,19 @@
+.popup__form-message {
+  font-family: 'Inter', Arial, sans-serif;
+  width: 490px;
+  max-height: 350px;
+  margin-bottom: 179px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 740px) {
+  .popup__form-message {
+    max-width: 280px;
+    flex-direction: column;
+    padding: 0;
+    /*margin-bottom: 100px;*/
+  }
+}

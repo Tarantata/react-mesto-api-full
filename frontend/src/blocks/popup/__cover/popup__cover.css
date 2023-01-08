@@ -1,0 +1,13 @@
+.popup__cover {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 27px;
+}
+
+@media screen and (max-width: 740px) {
+    .form__registration {
+        margin-bottom: 16px;
+    }
+}

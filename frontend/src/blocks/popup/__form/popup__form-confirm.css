@@ -1,0 +1,14 @@
+.popup__form-picture {
+  min-width: 100px;
+  margin: 8px 40px 20px 40px;
+  box-shadow: 0px 0px 25px
+  rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 560px) {
+  .popup__form-picture {
+    margin: 6px auto 37px;
+  }
+}

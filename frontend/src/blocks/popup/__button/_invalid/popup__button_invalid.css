@@ -1,0 +1,9 @@
+.popup__button_invalid {
+  background-color: #FFFFFF;
+  border: 1px solid #c4c4c4;
+  color: #c4c4c4;
+  cursor: default;
+}
+.popup__button_invalid:hover {
+  opacity: 1;
+}

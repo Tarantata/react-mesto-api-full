@@ -1,0 +1,39 @@
+.profile {
+  min-width: 880px;
+  width: 100%;
+  padding: 0;
+  color: #ffffff;
+  display: grid;
+  /*grid-template-columns: 120px 324px auto 150px;*/
+  grid-template-columns: 144px max-content auto 150px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "avatar title edit add"
+  "avatar subtitle . add";
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 920px) {
+  .profile {
+    min-width: 581px;
+    grid-template-columns: 150px 330px 101px;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas:
+    "avatar title edit"
+    "avatar subtitle ."
+    "avatar add .";
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .profile {
+    min-width: 282px;
+    grid-template-columns: 240px 42px;
+    grid-template-rows: 148px 36px 28px 86px;
+    grid-template-areas:
+    "avatar avatar"
+    "title edit"
+    "subtitle subtitle"
+    "add add";
+  }
+}

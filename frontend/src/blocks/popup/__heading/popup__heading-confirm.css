@@ -1,0 +1,14 @@
+.popup__heading-confirm {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .popup__heading-confirm {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

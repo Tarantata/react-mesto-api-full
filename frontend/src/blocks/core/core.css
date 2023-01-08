@@ -1,0 +1,16 @@
+.core {
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+@media screen and (max-width: 920px) {
+  .core {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .core {
+    padding-top: 34px;
+  }
+}

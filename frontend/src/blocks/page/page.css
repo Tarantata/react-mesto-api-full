@@ -1,0 +1,20 @@
+.page {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 45px 0 60px 0;
+}
+
+@media screen and (max-width: 568px) {
+  .page {
+    padding: 28px 0 36px;
+  }
+}

@@ -1,0 +1,15 @@
+.popup__save-place {
+  background-color: #000000;
+  border: none;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.popup__save-place:hover {
+  opacity: 0.8;
+}
+

@@ -1,0 +1,16 @@
+.card {
+  width: 282px;
+  height: 361px;
+  background-color: #FFFFFF;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  opacity: 0.5;
+}
