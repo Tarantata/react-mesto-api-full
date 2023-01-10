@@ -1,4 +1,4 @@
-export const BASE_URL = "https://auth.nomoreparties.co";
+export const BASE_URL = 'https://vvv.trialdomain.nomoredomains.club';
 
 function checkingInfo(res) {
   if (res.ok) {
@@ -10,6 +10,7 @@ function checkingInfo(res) {
 export function register (email, password) {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
@@ -22,6 +23,7 @@ export function register (email, password) {
   export function authorize (email, password) {
     return fetch(`${BASE_URL}/signin`, {
       method: 'POST',
+      credentials: 'include',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -31,13 +33,14 @@ export function register (email, password) {
         .then(checkingInfo)
   }
 
-  export function checkToken (token) {
+  export function checkToken () {
     return fetch(`${BASE_URL}/users/me`, {
       method: 'GET',
+      credentials: 'include',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        // 'Authorization': `Bearer ${token}`,
             }
           }
       )

@@ -14,6 +14,7 @@ class Api{
   getUserInfo() {
     return fetch(`${this._url}users/me`, {
       method: 'GET',
+      credentials: 'include',
       headers: this._headers
     })
       .then(this._checkingInfo)
@@ -22,6 +23,7 @@ class Api{
     getInitialCards() {
       return fetch(`${this._url}cards`, {
         method: 'GET',
+        credentials: 'include',
         headers: this._headers
       })
        .then(this._checkingInfo)
@@ -30,6 +32,7 @@ class Api{
     updateProfile(userData) {
       return fetch(`${this._url}users/me`, {
         method: 'PATCH',
+        credentials: 'include',
         headers: this._headers,
         body: JSON.stringify(userData)
       })
@@ -39,6 +42,7 @@ class Api{
     getAvatarInfo(avatarData) {
       return fetch(`${this._url}users/me/avatar`, {
         method: 'PATCH',
+        credentials: 'include',
         headers: this._headers,
         body: JSON.stringify(avatarData)
       })
@@ -48,6 +52,7 @@ class Api{
     createNewCard(cardData) {
       return fetch(`${this._url}cards`, {
         method: 'POST',
+        credentials: 'include',
         headers: this._headers,
         body: JSON.stringify(cardData)
     })
@@ -57,6 +62,7 @@ class Api{
     changeLikeCardStatus(id, isLiked) {
       return fetch(`${this._url}cards/likes/${id}`, {
         method: isLiked ? 'DELETE' : 'PUT',
+        credentials: 'include',
         headers: this._headers,
       })
         .then(this._checkingInfo)
@@ -65,6 +71,7 @@ class Api{
     deleteCard(cardId) {
       return fetch(`${this._url}cards/${cardId}`, {
         method: 'DELETE',
+        credentials: 'include',
         headers: this._headers,
       })
         .then(this._checkingInfo)
@@ -72,9 +79,10 @@ class Api{
 }
 
 export default new Api ({
-    url: `https://mesto.nomoreparties.co/v1/cohort-50/`,
+    // url: `https://mesto.nomoreparties.co/v1/cohort-50/`,
+    url: `https://vvv.trialdomain.nomoredomains.club/`,
     headers: {
-      authorization: '81329a12-6862-4862-a5bb-784002a24ef0',
+      // authorization: '81329a12-6862-4862-a5bb-784002a24ef0',
       'Content-Type': 'application/json'
     }
 });
