@@ -5,7 +5,7 @@ import {Link, Route, Switch} from "react-router-dom";
 
 function Header(props) {
   const location = useLocation();
-  const linkClassName = (`link header__link ${props.email ? '' : 'header__link_type_hidden'}`)
+  const linkClassName = (`link header__link header__link_type_login ${props.email ? '' : 'header__link_type_hidden'}`)
 
   function handleLinkClick() {
     if (location.pathname === '/') {

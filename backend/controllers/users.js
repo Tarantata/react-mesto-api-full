@@ -8,6 +8,8 @@ const NotFoundError = require('../errors/notFoundError');
 const ConflictError = require('../errors/conflictError');
 const UnauthorizedError = require('../errors/unathorizedError');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 const SALT_ROUNDS = 10;
 
 const createUser = async (req, res, next) => {
@@ -40,7 +42,11 @@ const login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
     const user = await User.findUserByCredentials(email, password);
-    const token = await jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
+    const token = await jwt.sign(
+      { _id: user._id },
+      NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+      { expiresIn: '7d' },
+    );
     return res.status(200).json({ token });
   } catch (err) {
     return next(new UnauthorizedError('Передан некорректный email или пароль'));

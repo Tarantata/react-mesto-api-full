@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://vvv.trialdomain.nomoredomains.club';
+const BASE_URL = 'https://api.trialdomen.students.nomoredomains.club';
 
 function checkingInfo(res) {
   if (res.ok) {
@@ -12,7 +12,6 @@ export function register (email, password) {
     method: 'POST',
     credentials: 'include',
     headers: {
-      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({email, password})
@@ -25,7 +24,6 @@ export function register (email, password) {
       method: 'POST',
       credentials: 'include',
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
         body: JSON.stringify({email, password})
@@ -33,14 +31,13 @@ export function register (email, password) {
         .then(checkingInfo)
   }
 
-  export function checkToken () {
+  export function checkToken (token) {
     return fetch(`${BASE_URL}/users/me`, {
       method: 'GET',
       credentials: 'include',
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json',
-        // 'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`,
             }
           }
       )

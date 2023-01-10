@@ -1,4 +1,4 @@
-class Api{
+class Api {
   constructor(config) {
     this._url = config.url;
     this._headers = config.headers;
@@ -60,7 +60,7 @@ class Api{
   }
 
     changeLikeCardStatus(id, isLiked) {
-      return fetch(`${this._url}cards/likes/${id}`, {
+      return fetch(`${this._url}cards/${id}/likes`, {
         method: isLiked ? 'DELETE' : 'PUT',
         credentials: 'include',
         headers: this._headers,
@@ -78,12 +78,5 @@ class Api{
     }
 }
 
-export default new Api ({
-    // url: `https://mesto.nomoreparties.co/v1/cohort-50/`,
-    url: `https://vvv.trialdomain.nomoredomains.club/`,
-    headers: {
-      // authorization: '81329a12-6862-4862-a5bb-784002a24ef0',
-      'Content-Type': 'application/json'
-    }
-});
+export default Api
 
