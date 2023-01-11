@@ -6,7 +6,6 @@ const MONGO_DUPLICATE_ERROR_CODE = 11000;
 const BadRequestError = require('../errors/badRequestError');
 const NotFoundError = require('../errors/notFoundError');
 const ConflictError = require('../errors/conflictError');
-const UnauthorizedError = require('../errors/unathorizedError');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 
@@ -49,7 +48,7 @@ const login = async (req, res, next) => {
     );
     return res.status(200).json({ token });
   } catch (err) {
-    return next(new UnauthorizedError('Передан некорректный email или пароль'));
+    return next(err);
   }
 };
 

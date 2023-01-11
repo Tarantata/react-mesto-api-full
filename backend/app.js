@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
-const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const cors = require('cors');
 const routerUser = require('./routes/users');
@@ -21,7 +20,7 @@ const { PORT = 3000 } = process.env;
 app.use(helmet());
 app.use(cors(allowedCors));
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(requestLogger);
 
 app.get('/crash-test', () => {
